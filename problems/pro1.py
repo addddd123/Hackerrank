@@ -1,3 +1,4 @@
+"""
 #hackerrank
 
 Given the names and grades for each student in a Physics class of
@@ -40,4 +41,35 @@ Sample Output 0
 
 Berry
 Harry
+"""
+list=[]
 
+for w in range(3):
+    name = input()
+    score = float(input())
+    
+    list.append([name,score])
+
+
+
+        
+list2=[]
+
+for m in range(len(list)):
+    list2.append(list[m][1])
+
+list3=[]
+for l in range(len(list)):
+    m=min(list2)
+    list2.remove(m)
+    list3.append(m)
+lis=[]
+for kk in range(len(list)):
+    for mm in range(len(list)):
+        if list3[kk] == list[mm][1]:
+            lis.append(list[mm])
+            
+            
+for i in range(2):
+    print(lis[i][0])
+    print(lis[i][1])
